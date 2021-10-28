@@ -23,12 +23,12 @@ export default class Twitter {
     const appFields = this.appData.fields.find((field: Field) => field.key == 'oAuthRedirectUrl')
     const callbackUrl = appFields.value;
 
-    const authLink = await this.client.generateAuthLink(callbackUrl);
+    const authData = await this.client.generateAuthLink(callbackUrl);
 
     return {
-      url: authLink.url,
-      accessToken: authLink.oauth_token,
-      accessSecret: authLink.oauth_token_secret,
+      url: authData.url,
+      accessToken: authData.oauth_token,
+      accessSecret: authData.oauth_token_secret,
     }
   }
 

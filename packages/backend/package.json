@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@octokit/oauth-methods": "^1.2.6",
+    "@slack/oauth": "2.3.0",
     "axios": "0.24.0",
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
